@@ -1,0 +1,70 @@
+﻿@page
+@model WebApplication8.Pages.Reports.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Report</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Report.ID" />
+            <div class="form-group">
+                <label asp-for="Report.ExecutorId" class="control-label"></label>
+                <input asp-for="Report.ExecutorId" class="form-control" />
+                <span asp-validation-for="Report.ExecutorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.Time" class="control-label"></label>
+                <input asp-for="Report.Time" class="form-control" />
+                <span asp-validation-for="Report.Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.Materials" class="control-label"></label>
+                <input asp-for="Report.Materials" class="form-control" />
+                <span asp-validation-for="Report.Materials" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.Price" class="control-label"></label>
+                <input asp-for="Report.Price" class="form-control" />
+                <span asp-validation-for="Report.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.CauseMalfunction" class="control-label"></label>
+                <input asp-for="Report.CauseMalfunction" class="form-control" />
+                <span asp-validation-for="Report.CauseMalfunction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.CreateAt" class="control-label"></label>
+                <input asp-for="Report.CreateAt" class="form-control" />
+                <span asp-validation-for="Report.CreateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.UpdateAt" class="control-label"></label>
+                <input asp-for="Report.UpdateAt" class="form-control" />
+                <span asp-validation-for="Report.UpdateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.FinishAt" class="control-label"></label>
+                <input asp-for="Report.FinishAt" class="form-control" />
+                <span asp-validation-for="Report.FinishAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

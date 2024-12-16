@@ -1,0 +1,60 @@
+﻿@page
+@model WebApplication8.Pages.Monitorings.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Monitoring</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Monitoring.ID" />
+            <div class="form-group">
+                <label asp-for="Monitoring.ProcessingTime" class="control-label"></label>
+                <input asp-for="Monitoring.ProcessingTime" class="form-control" />
+                <span asp-validation-for="Monitoring.ProcessingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Monitoring.QuialityWork" class="control-label"></label>
+                <input asp-for="Monitoring.QuialityWork" class="form-control" />
+                <span asp-validation-for="Monitoring.QuialityWork" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Monitoring.Expenses" class="control-label"></label>
+                <input asp-for="Monitoring.Expenses" class="form-control" />
+                <span asp-validation-for="Monitoring.Expenses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Monitoring.CreateAt" class="control-label"></label>
+                <input asp-for="Monitoring.CreateAt" class="form-control" />
+                <span asp-validation-for="Monitoring.CreateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Monitoring.UpdateAt" class="control-label"></label>
+                <input asp-for="Monitoring.UpdateAt" class="form-control" />
+                <span asp-validation-for="Monitoring.UpdateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Monitoring.FinishAt" class="control-label"></label>
+                <input asp-for="Monitoring.FinishAt" class="form-control" />
+                <span asp-validation-for="Monitoring.FinishAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,65 @@
+﻿@page
+@model WebApplication8.Pages.RequestExecutes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>RequestExecute</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RequestExecute.ID" />
+            <div class="form-group">
+                <label asp-for="RequestExecute.ExecutorId" class="control-label"></label>
+                <input asp-for="RequestExecute.ExecutorId" class="form-control" />
+                <span asp-validation-for="RequestExecute.ExecutorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestExecute.ChangesMade" class="control-label"></label>
+                <input asp-for="RequestExecute.ChangesMade" class="form-control" />
+                <span asp-validation-for="RequestExecute.ChangesMade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestExecute.OrderParts" class="control-label"></label>
+                <input asp-for="RequestExecute.OrderParts" class="form-control" />
+                <span asp-validation-for="RequestExecute.OrderParts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestExecute.CoordinationWork" class="control-label"></label>
+                <input asp-for="RequestExecute.CoordinationWork" class="form-control" />
+                <span asp-validation-for="RequestExecute.CoordinationWork" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestExecute.CreateAt" class="control-label"></label>
+                <input asp-for="RequestExecute.CreateAt" class="form-control" />
+                <span asp-validation-for="RequestExecute.CreateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestExecute.UpdateAt" class="control-label"></label>
+                <input asp-for="RequestExecute.UpdateAt" class="form-control" />
+                <span asp-validation-for="RequestExecute.UpdateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestExecute.FinishAt" class="control-label"></label>
+                <input asp-for="RequestExecute.FinishAt" class="form-control" />
+                <span asp-validation-for="RequestExecute.FinishAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

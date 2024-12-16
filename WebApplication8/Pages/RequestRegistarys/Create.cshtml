@@ -1,0 +1,54 @@
+﻿@page
+@model WebApplication8.Pages.RequestRegistarys.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>RequestRegistary</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RequestRegistary.Priority" class="control-label"></label>
+                <input asp-for="RequestRegistary.Priority" class="form-control" />
+                <span asp-validation-for="RequestRegistary.Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRegistary.SaveInformation" class="control-label"></label>
+                <input asp-for="RequestRegistary.SaveInformation" class="form-control" />
+                <span asp-validation-for="RequestRegistary.SaveInformation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRegistary.CreateAt" class="control-label"></label>
+                <input asp-for="RequestRegistary.CreateAt" class="form-control" />
+                <span asp-validation-for="RequestRegistary.CreateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRegistary.UpdateAt" class="control-label"></label>
+                <input asp-for="RequestRegistary.UpdateAt" class="form-control" />
+                <span asp-validation-for="RequestRegistary.UpdateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRegistary.FinishAt" class="control-label"></label>
+                <input asp-for="RequestRegistary.FinishAt" class="form-control" />
+                <span asp-validation-for="RequestRegistary.FinishAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,61 @@
+﻿@page
+@model WebApplication8.Pages.RequestExecutes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>RequestExecute</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestExecute.ExecutorId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestExecute.ExecutorId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestExecute.ChangesMade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestExecute.ChangesMade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestExecute.OrderParts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestExecute.OrderParts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestExecute.CoordinationWork)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestExecute.CoordinationWork)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestExecute.CreateAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestExecute.CreateAt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestExecute.UpdateAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestExecute.UpdateAt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestExecute.FinishAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestExecute.FinishAt)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.RequestExecute?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

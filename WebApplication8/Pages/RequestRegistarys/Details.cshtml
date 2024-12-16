@@ -1,0 +1,49 @@
+﻿@page
+@model WebApplication8.Pages.RequestRegistarys.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>RequestRegistary</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestRegistary.Priority)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestRegistary.Priority)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestRegistary.SaveInformation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestRegistary.SaveInformation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestRegistary.CreateAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestRegistary.CreateAt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestRegistary.UpdateAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestRegistary.UpdateAt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestRegistary.FinishAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestRegistary.FinishAt)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.RequestRegistary?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,75 @@
+﻿@page
+@model WebApplication8.Pages.RequestRemonts.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>RequestRemont</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RequestRemont.ID" />
+            <div class="form-group">
+                <label asp-for="RequestRemont.Equipment" class="control-label"></label>
+                <input asp-for="RequestRemont.Equipment" class="form-control" />
+                <span asp-validation-for="RequestRemont.Equipment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRemont.SerialNumber" class="control-label"></label>
+                <input asp-for="RequestRemont.SerialNumber" class="form-control" />
+                <span asp-validation-for="RequestRemont.SerialNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRemont.Description" class="control-label"></label>
+                <input asp-for="RequestRemont.Description" class="form-control" />
+                <span asp-validation-for="RequestRemont.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRemont.ClientId" class="control-label"></label>
+                <input asp-for="RequestRemont.ClientId" class="form-control" />
+                <span asp-validation-for="RequestRemont.ClientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRemont.Priority" class="control-label"></label>
+                <input asp-for="RequestRemont.Priority" class="form-control" />
+                <span asp-validation-for="RequestRemont.Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRemont.CreateAt" class="control-label"></label>
+                <input asp-for="RequestRemont.CreateAt" class="form-control" />
+                <span asp-validation-for="RequestRemont.CreateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRemont.UpdateAt" class="control-label"></label>
+                <input asp-for="RequestRemont.UpdateAt" class="form-control" />
+                <span asp-validation-for="RequestRemont.UpdateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRemont.FinishAt" class="control-label"></label>
+                <input asp-for="RequestRemont.FinishAt" class="form-control" />
+                <span asp-validation-for="RequestRemont.FinishAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestRemont.Status" class="control-label"></label>
+                <input asp-for="RequestRemont.Status" class="form-control" />
+                <span asp-validation-for="RequestRemont.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
